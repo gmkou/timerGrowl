@@ -1,7 +1,8 @@
 #!/bin/bash
 
+CMDNAME=`basename $0`
 if [ $# -ne 2 ]; then
-  echo "usage:timerGrowl message title " 1>&2
+  echo "usage:$CMDNAME message title " 1>&2
   exit 1
 fi
 growlnotify -m $1 -t $2
