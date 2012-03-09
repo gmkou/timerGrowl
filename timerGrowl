@@ -1,2 +1,7 @@
 #!/bin/bash
-growlnotify -m message -t title
+
+if [ $# -ne 2 ]; then
+  echo "usage:timerGrowl message title " 1>&2
+  exit 1
+fi
+growlnotify -m $1 -t $2
