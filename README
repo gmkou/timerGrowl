@@ -1,2 +1,6 @@
 timerGrowl
 Copyright(c) Kosuke Nagano <gm.charlie@gmail.com>
+
+* Note
+for MacOSX: need to execute following command to enable at command.
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.atrun.plist
