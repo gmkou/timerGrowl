@@ -1,7 +1,9 @@
 #!/bin/bash
 
-CMDNAME=`basename $0`
-MESSAGE_TITLE=$CMDNAME
+MESSAGE_TITLE="growlTimer"
 MESSAGE="Time is UP!!"
+VOICE="Victoria"
 
-growlnotify  -m "$MESSAGE" -t $MESSAGE_TITLE -s
+afplay /System/Library/Sounds/Submarine.aiff 
+growlnotify  -m "$MESSAGE" -t "$MESSAGE_TITLE" -s
+#say $MESSAGE -v $VOICE
