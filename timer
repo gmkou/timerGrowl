@@ -1,6 +1,8 @@
 #!/bin/bash
 
+PWD=`dirname $0`
 CMDNAME="timer"
+TIMERGROWL="$PWD/timerGrowl"
 if [ $# -ne 2 ]; then
   echo "usage:$CMDNAME at hh:mm " 1>&2
   echo "      $CMDNAME after minutes " 1>&2
@@ -8,11 +10,11 @@ if [ $# -ne 2 ]; then
 fi
 
 if [ "$1" == "at" ]; then
-   at -f timerGrowl  -v $2
+   at -f $TIMERGROWL  -v $2
    exit 0
 fi
 if [ "$1" == "after" ]; then
-   at -f timerGrowl -v now + $2 minutes
+   at -f $TIMERGROWL -v now + $2 minutes
    exit 0
 fi
 
