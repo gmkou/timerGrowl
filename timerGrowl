@@ -4,6 +4,6 @@ MESSAGE_TITLE="growlTimer"
 MESSAGE="Time is UP!!"
 VOICE="Victoria"
 
-afplay /System/Library/Sounds/Submarine.aiff 
+afplay /System/Library/Sounds/Submarine.aiff &
 growlnotify  -m "$MESSAGE" -t "$MESSAGE_TITLE" -s
 #say $MESSAGE -v $VOICE
