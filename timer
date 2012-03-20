@@ -1,0 +1,19 @@
+#!/bin/bash
+
+CMDNAME="timer"
+if [ $# -ne 2 ]; then
+  echo "usage:$CMDNAME at hh:mm " 1>&2
+  echo "      $CMDNAME after minutes " 1>&2
+  exit 1
+fi
+
+if [ "$1" == "at" ]; then
+   at -f timerGrowl  -v $2
+   exit 0
+fi
+if [ "$1" == "after" ]; then
+   at -f timerGrowl -v now + $2 minutes
+   exit 0
+fi
+
+exit 1
