@@ -7,4 +7,4 @@ if [ $# -ne 1 ]; then
   exit 1
 fi
 
-growlnotify -m $1 -t $MESSAGE_TITLE
+growlnotify -m $1 -t $MESSAGE_TITLE -s
